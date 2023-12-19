@@ -10,16 +10,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Clarifie/BonkioSoASite.git"
+    "url": "git+https://github.com/Clarifie/BonkSoA.git"
   },
   "author": "Clarif",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Clarifie/BonkioSoASite/issues"
+    "url": "https://github.com/Clarifie/BonkSoA/issues"
   },
-  "homepage": "https://github.com/Clarifie/BonkioSoASite#readme",
+  "homepage": "https://github.com/Clarifie/BonkSoA#readme",
   "dependencies": {
-    "three": "^0.159.0",
+    "three": "^0.159.0"
+  },
+  "devDependencies": {
     "vite": "^5.0.10"
   }
 }
