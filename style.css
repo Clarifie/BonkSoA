@@ -1,1 +1,27 @@
-body {margin: 10pt;}
+#backCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#pageSize {
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+p {
+    color: white;
+    text-align: center;
+}
+
+.centered {
+    background-color: rgba(15, 10, 25, 0.2);
+    align-items: center;
+    padding-left: 20vw;
+    padding-right: 20vw;
+}
