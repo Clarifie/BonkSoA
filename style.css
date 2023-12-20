@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(37, 33, 40);
+    background-color: rgb(0, 0, 0);
 }
 
 #backCanvas {
@@ -18,18 +18,36 @@ h1 {
     font-family: "Alfa Slab One", serif;
     font-weight: 400;
     font-size: 5em;
-    color: white;
+    background: url("https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg") no-repeat;
+    /*Test support*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /*color: white;*/
     text-align: left;
 }
 p {
+    text-indent: 5vw;
     font-family: "Nunito", serif;
     font-size: 2em;
-    color: white;
-    text-align: center;
+    /*color: white;*/
+    text-align: left;
 }
 
 .centered {
+    background-color: white;
     align-items: center;
-    padding-left: 20vw;
-    padding-right: 20vw;
+    min-height: 100vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+@media (max-width: 800px) {
+    .centered {
+        margin-left: 5svw;
+        margin-right: 5vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
 }
