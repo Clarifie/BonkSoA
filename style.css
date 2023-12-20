@@ -11,10 +11,15 @@
 }
 
 h1 {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    font-size: 10em;
     color: white;
     text-align: center;
 }
 p {
+    font-family: "Nunito", serif;
+    font-size: 2em;
     color: white;
     text-align: center;
 }
