@@ -1,4 +1,5 @@
 ### In progress:
+1. MAKE IT LOOK GOOD (it doesnt)
 - three.js for a medal looking thing in the background, the 3d model is definitly a work in progress and can be easily switched out to a 2d design
 - description of SoA
 - possibly a table of contents if the list gets longer just so people dont have to scroll to see a specific map
