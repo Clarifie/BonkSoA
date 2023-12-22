@@ -7,4 +7,4 @@
 - an image of the map
 
 ### Usage
-Clone repository then `npm install` in the working directory
+~~Clone repository then `npm install` in the working directory~~ do not need three.js for this branch, ignore js file.
