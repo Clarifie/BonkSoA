@@ -1,7 +1,8 @@
 html, body {
-    background-color: rgb(35, 32, 36);
+    margin: 0;
+    background-color: rgba(35, 32, 36, 0);
     max-width: 100%;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 
 #backCanvas {
@@ -53,32 +54,56 @@ p {
     background-color: white;
     align-items: center;
     min-height: 100vh;
-    margin-left: 15%;
-    margin-right: 15%;
+    max-height: 100vh;
+    margin-left: 20%;
+    margin-right: 0%;
     padding-top: 10pt;
     padding-left: 5%;
     padding-right: 5%;
 }
 
 .imageHolder {
-    margin: 0;
-    padding: 0;
-    max-width: 100%;
+    position: sticky;
+    top:0;
+    z-index: -1;
+    max-width: auto;
+    min-height: 100vh;
+    align-content: center;
 }
 .showcase {
     margin:0;
     padding: 0;
-    max-width: 100%;
-    max-height: auto;
+    max-width: auto;
+    max-height: 100vh
 }
 
-@media (max-width: 800px) {
+/*@media (min-width: 900px) {
+    .imageHolder:hover {
+        padding-left: 50%;
+        padding-right: 50%;
+    }
+    .imageHolder:hover .centered {
+        left:100%;
+    }
+}*/
+
+@media (max-width: 900px) {
     h2 {
         font-size: 3em;
     }
+    .imageHolder {
+        position: block;
+        max-width: 100%;
+        min-height: auto;
+    }
+    .showcase {
+        position: block;
+        max-width: 100%;
+        max-height: auto;
+    }
     .centered {
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 0;
+        margin-right: 0;
         padding-left: 5%;
         padding-right: 5%;
     }
