@@ -1,8 +1,5 @@
 html, body {
     margin: 0;
-    background-color: rgba(35, 32, 36, 0);
-    max-width: 100%;
-    /*overflow-x: hidden;*/
 }
 
 #backCanvas {
@@ -15,6 +12,14 @@ html, body {
 #pageSize {
     min-height: 100vh;
     min-width: 100%;
+}
+
+#revealBar {
+    background-image: none;
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    width: 20%;
 }
 
 h1 {
@@ -60,6 +65,10 @@ p {
     padding-top: 10pt;
     padding-left: 5%;
     padding-right: 5%;
+    scroll-snap-type: y mandatory;
+    opacity: 1;
+
+    transition: 0.35s;
 }
 
 .imageHolder {
@@ -69,27 +78,38 @@ p {
     max-width: auto;
     min-height: 100vh;
     align-content: center;
+
+    transition: 0.2s;
 }
 .showcase {
     margin:0;
     padding: 0;
     max-width: auto;
-    max-height: 100vh
+    /*max-height: 100vh*/
+
+    transition: 0.2s;
 }
 
-/*@media (min-width: 900px) {
-    .imageHolder:hover {
-        padding-left: 50%;
-        padding-right: 50%;
-    }
-    .imageHolder:hover .centered {
-        left:100%;
-    }
+.snapStart {
+    scroll-snap-align: start;
+}
+
+/*#revealBar:hover ~ .imageHolder .showcase {
+    max-height: 100vh;
 }*/
+#revealBar:hover ~ .centered {
+    opacity: 0;
+}
 
 @media (max-width: 900px) {
+    body {
+        scroll-snap-type: none;
+    }
     h2 {
         font-size: 3em;
+    }
+    #revealBar {
+        left:-100%;
     }
     .imageHolder {
         position: block;
@@ -106,5 +126,6 @@ p {
         margin-right: 0;
         padding-left: 5%;
         padding-right: 5%;
+        scroll-snap-type: none;
     }
 }
