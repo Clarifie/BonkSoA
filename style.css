@@ -93,7 +93,7 @@ p {
     max-width: auto;
     min-height: 100vh;
     align-content: center;
-    z-index: 0;
+    z-index: -1;
     transition: 0.2s;
 }
 .showcase {
@@ -103,6 +103,23 @@ p {
     /*max-height: 100vh*/
 
     transition: 0.2s;
+}
+.links_fancy_wrapper {
+    background-color: black;
+    display: block;
+    min-height: 20vh;
+    align-content: center;
+}
+.links_fancy div {
+    background-color: aquamarine;
+}
+.links_fancy {
+    display: inline;
+    align-items: center;
+    list-style-type: none;
+}
+.links_fancy li {
+    display: inline;
 }
 
 .snapStart {
