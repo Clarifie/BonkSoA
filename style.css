@@ -19,6 +19,15 @@ html, body {
     position: fixed;
     left: 0;
     height: 100vh;
+    z-index: 1;
+    width: 20%;
+}
+#revealBarR {
+    background-image: none;
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    z-index: 1;
     width: 20%;
 }
 
@@ -56,29 +65,35 @@ p {
 }
 
 .centered {
+    position: relative;
     background-color: white;
     align-items: center;
     min-height: 100vh;
-    max-height: 100vh;
-    margin-left: 20%;
-    margin-right: 0%;
     padding-top: 10pt;
     padding-left: 5%;
     padding-right: 5%;
     scroll-snap-type: y mandatory;
-    opacity: 1;
+    z-index: 2;
+    /*opacity: 1;*/
 
     transition: 0.35s;
+}
+.right {
+    margin-left: 20%;
+    margin-right: 0%;
+}
+.left {
+    margin-left: 0%;
+    margin-right: 20%;
 }
 
 .imageHolder {
     position: sticky;
-    top:0;
-    z-index: -1;
+    top: 0;
     max-width: auto;
     min-height: 100vh;
     align-content: center;
-
+    z-index: 0;
     transition: 0.2s;
 }
 .showcase {
@@ -97,8 +112,13 @@ p {
 /*#revealBar:hover ~ .imageHolder .showcase {
     max-height: 100vh;
 }*/
-#revealBar:hover ~ .centered {
-    opacity: 0;
+#revealBar:hover ~ .right {
+    margin-left: 100%;
+    margin-right: -100%;
+}
+#revealBarR:hover ~ .left {
+    margin-right: 100%;
+    margin-left: -100%;
 }
 
 @media (max-width: 900px) {
@@ -121,9 +141,15 @@ p {
         max-width: 100%;
         max-height: auto;
     }
-    .centered {
+    .right {
         margin-left: 0;
         margin-right: 0;
+    }
+    .left {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .centered {
         padding-left: 5%;
         padding-right: 5%;
         scroll-snap-type: none;
